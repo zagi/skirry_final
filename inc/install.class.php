@@ -1,6 +1,7 @@
 <?php
 
-/* Install class
+/*
+ * Install class
  * Use wpdb object and dbDelta function to create
  * database tables to enhance the functionality of 
  * the plugin

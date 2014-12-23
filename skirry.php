@@ -1,10 +1,11 @@
 <?php
+
 /*
  * Plugin Name:       skirry
  * Plugin URI:        http://github.com/zagi/skirry
  * Description:       Plugin operates the orders of the dishes.
- * Version:           0.1.1
- * Author:            Michal Zagalski
+ * Version:           0.1.1r
+ * Author:            Michal Zagalski <michal[at]zagalski.pl>
  * Author URI:        http://zagalski.pl
  * Text Domain:       skirry-locale
  * License:           Commercial
@@ -15,7 +16,7 @@
  * check whether the file is called directly,
  * if yes finalize the execution
  */
-if( ! defined( 'WPINC' ) )
+if ( ! defined( 'WPINC' ) )
 {
     die;   
 }
