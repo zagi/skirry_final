@@ -67,7 +67,9 @@ class Skirry
      */
     private function public_hooks()
     {
-        
+        /*
+         * Create 
+         */
     }
     
     /*

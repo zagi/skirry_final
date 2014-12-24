@@ -15,15 +15,25 @@ class Install
      */
     public function install()
     {
-        //get wpdb object
+        /*
+         * Get wpdb object
+         */
         global $wpdb; 
-        //get charset collate
+        
+        /*
+         * Get charset collate
+         */
         $charset_collate = $wpdb->get_charset_collate();
-        //set tables names
+        
+        /*
+         * Set tables names
+         */
         $dishes = $wpdb->prefix . 'dishes';
         $dish_orders = $wpdb->prefix . 'dish_orders';
         
-        //define sql query
+        /*
+         *  Define sql query
+         */
         $sql = "CREATE TABLE $dishes (
                     id mediumint(9) NOT NULL AUTO_INCREMENT,
                     post_id mediumint(9) NOT NULL,
