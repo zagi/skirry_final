@@ -34,7 +34,7 @@ class Skirry
         /*
          * Create hook loader object
          */
-        $hook_loader = new Hook_Loader();
+        $this->hook_loader = new Hook_Loader();
         
         /*
          * Call admin and public hooks methods, which

@@ -6,6 +6,8 @@
  * Author: michal[at]zagalski.pl
  */
 
+include SKIRRY_DIR . 'admin/helper/table.class.php';
+
 class Admin
 {   
     public function enqueue_styles()
