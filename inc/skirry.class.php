@@ -7,12 +7,12 @@
  */
 
 /*
- * Include Hook_Loader class, Admin and Public class
+ * Include Hook_Loader class, Admin and Public and Ajax class
  */
 include SKIRRY_DIR . 'inc/hook_loader.class.php';
 include SKIRRY_DIR . 'admin/admin.class.php';
 include SKIRRY_DIR . 'public/public.class.php';
-
+include SKIRRY_DIR . 'inc/ajax.class.php';
 
 class Skirry
 {
@@ -58,7 +58,7 @@ class Skirry
          * Add actions
          */
         $this->hook_loader->add_action( 'wp_enqueue_scripts', $admin, 'enqueue_styles' );
-        $this->hook_loader->
+        $this->hook_loader->add
     }
     
     /*

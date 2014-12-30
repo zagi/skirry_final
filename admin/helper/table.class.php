@@ -50,7 +50,7 @@ class Table extends WP_List_Table
     {
         $actions = array(
             'edit'  => sprintf( '<a href="?page=%s&action=%s&dish=%s">Edytuj</a>', $_REQUEST['page'], 'edit', $item['id'] ),
-            'delete'  => sprintf( '<a href="?page=%s&action=%s&dish=%s">Edytuj</a>', $_REQUEST['delete'], 'edit', $item['id'] ),
+            'delete'  => sprintf( '<a href="?page=%s&action=%s&dish=%s">Edytuj</a>', $_REQUEST['page'], 'edit', $item['id'] ),
         );
         
         return sprintf( 
@@ -73,12 +73,21 @@ class Table extends WP_List_Table
     
     function get_columns()
     {
-        
+        return $columns = array(
+            'cb'        => '<input type="checkbox" />',
+            'orderid'   => 'Numer zamówienia',
+            'usernm'    => 'Nazwa użytkownika',
+            'orderct'   => 'Suma należności'
+        );
     }
     
     function get_sortable_columns()
     {
-        
+        return $sortable_column = array(
+            'orderid'   => array( 'orderid', false ),
+            'usernm'    => array( 'usernm', false ),
+            'orderct'   => array( 'orderct', false),
+        );
     }
     
     function get_bulk_actions()
