@@ -53,7 +53,12 @@ class Admin
         
         //count the orders,
         //get 5 recent orders,
-        //set options
+        
+        
+        $data = array(
+            'order_count'   => $order_count,
+            'order_recent'  => $order_recent,
+        );
         
         include SKIRRY_DIR . 'admin/view/dashboard.php';
     }

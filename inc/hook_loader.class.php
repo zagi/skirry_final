@@ -81,4 +81,3 @@ class Hook_Loader
         return $this->filters;   
     }
 }
- 

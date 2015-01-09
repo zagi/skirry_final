@@ -13,6 +13,7 @@ include SKIRRY_DIR . 'inc/hook_loader.class.php';
 include SKIRRY_DIR . 'admin/admin.class.php';
 include SKIRRY_DIR . 'public/public.class.php';
 include SKIRRY_DIR . 'inc/ajax.class.php';
+include SKIRRY_DIR . 'inc/options.class.php'
 
 class Skirry
 {
@@ -27,11 +28,6 @@ class Skirry
     public function __construct()
     {
         /*
-         * Define options property as array
-         */
-        $this->options = array();
-
-        /*
          * Create hook loader object
          */
         $this->hook_loader = new Hook_Loader();
@@ -41,6 +37,7 @@ class Skirry
          */
         $this->admin_hooks();
         $this->public_hooks();
+        
     }
     
     /*
@@ -50,15 +47,20 @@ class Skirry
     private function admin_hooks()
     {
         /*
-         * Create admin object
+         * Create admin and ajax object
          */
         $admin = new Admin();
+        $ajax = new Ajax();
+        
         
         /*
          * Add actions
          */
         $this->hook_loader->add_action( 'wp_enqueue_scripts', $admin, 'enqueue_styles' );
-        $this->hook_loader->add
+        $this->hook_loader->add_action( 'admin_menu', $admin, 'add_menu_page' ); 
+        $this->hook_loader->add_action( '', $admin, '' );
+        
+        $this->hook_loader->add_action( 'get_' 
     }
     
     /*
